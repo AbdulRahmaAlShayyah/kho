@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Happy Birthday Kholoud! ✨</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Canvas Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Lights & Canvas Background -->
+  <div class="ambient-light"></div>
+  <canvas id="heart-canvas"></canvas>
+
+  <main class="app-container">
+    
+    <!-- Step 1: Secret Message Input Gate -->
+    <section id="input-screen" class="screen-container active">
+      <div class="glass-card welcome-card">
+        <div class="sparkle-icon">✨</div>
+        <h1 class="card-title">Secret Passcode</h1>
+        <p class="card-subtitle">Type <span>i love you</span> to unlock your surprise</p>
+        
+        <form id="passcode-form" onsubmit="handlePasscodeSubmit(event)">
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="passcode-input" 
+              placeholder="type 'i love you' here..." 
+              autocomplete="off"
+              spellcheck="false"
+              required
+            >
+          </div>
+          <button type="submit" class="btn-glow">
+            <span>Unlock Surprise 💖</span>
+          </button>
+        </form>
+        <p id="error-msg" class="error-msg">Please type "i love you" in lowercase!</p>
+      </div>
+    </section>
+
+    <!-- Step 2: Final Birthday Greeting Card -->
+    <section id="greeting-screen" class="screen-container">
+      <div id="final-card" class="glass-card hero-greeting-card">
+        <div class="glowing-heart">💖</div>
+        <h1 class="birthday-title">Happy Birthday</h1>
+        <h2 class="sister-title">My Dearest Sister</h2>
+        <h3 class="person-name">Kholoud ✨</h3>
+        <p class="wish-message">
+          May your year be filled with endless joy, love, laughter, and all the magical moments you deserve!
+        </p>
+        <div class="tag-badge">Best Sister Ever 🌸</div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
